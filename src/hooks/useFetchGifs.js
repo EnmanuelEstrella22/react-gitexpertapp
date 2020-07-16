@@ -1,5 +1,4 @@
-import { useState } from "react";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import { getGrifs } from "../helpers/getGifs";
 
 const useFetchGifs = (category) => {
@@ -10,7 +9,6 @@ const useFetchGifs = (category) => {
 
   useEffect(() => {
     getGrifs(category).then((imgs) => {
-      console.log(imgs);
       setTimeout(() => {
         setState({
           data: imgs,
